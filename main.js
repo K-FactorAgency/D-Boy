@@ -1,7 +1,7 @@
 // Async function to fetch CSV data and convert it to HTML
 async function fetchAndDisplayComments(keyword) {
     try {
-        const commentsPath = `/samsunggalaxy/${keyword}_comments.csv`; // Assuming path structure
+        const commentsPath = `/${keyword}/${keyword}_comments.csv`; // Assuming path structure
         const response = await fetch(commentsPath);
         const csvData = await response.text();
         return parseCSVtoHTML(csvData);
@@ -75,7 +75,7 @@ async function loadData() {
 function loadTopics() {
     const keyword = document.getElementById('keyword').value;
     if (keyword) {
-        const ldaPath = `/samsunggalaxy/${keyword}_lda.html`; // Assuming path structure
+        const ldaPath = `/${keyword}/${keyword}_lda.html`; // Assuming path structure
         const ldaFrame = document.getElementById('lda-content');
         ldaFrame.src = ldaPath;
         document.getElementById('lda-section').style.display = 'block';
