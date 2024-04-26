@@ -1,19 +1,54 @@
 /* General Body and Font Settings */
 body {
-    font-family: 'Roboto', sans-serif; /* Consistent font family for aesthetic uniformity */
+    font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
-}
-
-/* Main Container Styling */
-.container {
+  }
+  
+  /* Container Styling */
+  .container {
     max-width: 1200px;
     margin: auto;
-    background: #ffffff;
+    padding: 0; /* Remove container padding for sections */
+  }
+  
+  /* Header Styling (New) */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
+    background-color: #fff; /* Light background for header */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    margin: 0; /* Remove default margin for heading */
+  }
+  
+  a {
+    color: #ffa500; /* Glossy orange for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #e68a00; /* Darker orange on hover */
+  }
+  
+  /* Section Styling (New) */
+  section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff; /* Light background for sections */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  h3 {
+    margin: 0
 }
 
 /* Styling for Select and Button - Unified Look */
