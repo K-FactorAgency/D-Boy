@@ -1,14 +1,7 @@
-v1.2.0
-Last Edited 240426
+v1.3.0
+Last Edited 240427
 
-Integrated video.html and index.html
-Integrated video.js and main.js
-'Robotos' Fonts in videos.js
-
-Deleted
--index.html
--main.js
--styles.css
+Added 'Explain Topics' Button
 
 Add Data
 -samsunggalaxy_lda_results.csv
