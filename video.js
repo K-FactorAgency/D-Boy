@@ -78,18 +78,20 @@ function displayExplanations(data) {
     // Clear any previous content
     explanationSection.innerHTML = '';
 
-    // Create HTML for explanations
-    const explanationsHTML = data.map(topic => `
-        <h3>Topic ${topic['Topic']}</h3>
-        <p><strong>Keywords:</strong> ${topic['Keywords']}</p>
-        <p>${topic['Explanation']}</p>
-    `).join('');
-
-    // Append explanations HTML to the section
-    explanationSection.innerHTML = explanationsHTML;
+    // Loop through each topic and create an explanation box
+    data.forEach(topic => {
+        const explanationBox = document.createElement('div');
+        explanationBox.classList.add('explanation-box');
+        explanationBox.innerHTML = `
+            <h3>Topic ${topic['Topic']}</h3>
+            <p><strong>Keywords:</strong> ${topic['Keywords']}</p>
+            <p>${topic['Explanation']}</p>
+        `;
+        explanationSection.appendChild(explanationBox);
+    });
 
     // Show the explanation section
-    explanationSection.style.display = 'block';
+    explanationSection.style.display = 'flex'; // Make sure it's displayed as flex
 }
 
 
