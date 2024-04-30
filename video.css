@@ -171,4 +171,29 @@ button:hover, select:hover {
   background-color: #eee;
 }
 
+/* Background gradient for explanation boxes */
+.explanation-box {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Subtle gradient for a refined look */
+  border: 1px solid #333333; /* Dark border */
+  padding: 20px; /* Padding around the box */
+  margin-bottom: 20px; /* Margin bottom for spacing between boxes */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow effect */
+  font-family: 'Roboto', sans-serif; /* Trendy font family */
+  font-size: 16px; /* Font size */
+  line-height: 1.6; /* Line height */
+  width: calc(50% - 20px); /* Initially, set 50% width for desktop */
+}
 
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .explanation-box {
+      width: calc(33.33% - 20px); /* 33.33% width for screens larger than 768px */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .explanation-box {
+      width: calc(50% - 20px); /* 50% width for screens smaller than 480px */
+  }
+}
