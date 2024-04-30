@@ -1,145 +1,141 @@
 /* General Body and Font Settings */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-  }
-  
-  /* Container Styling */
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0; /* Remove container padding for sections */
-  }
-  
-  /* Styling for Select and Button - Unified Look */
-  select, button {
-    font-size: 14px;
-    padding: 12px 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: #ffa500; /* Trendy orange for buttons and selects */
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover, select:hover {
-    background-color: #e68a00; /* Darker shade of orange on hover */
-  }
-  
-  /* Background gradient for explanation boxes */
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container Styling */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  margin-bottom: 200px; /* Add margin-bottom to create space underneath */
+}
+
+
+/* Styling for Select and Button - Unified Look */
+select, button {
+  font-size: 14px;
+  padding: 12px 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffa500; /* Trendy orange for buttons and selects */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, select:hover {
+  background-color: #e68a00; /* Darker shade of orange on hover */
+}
+
+/* Background gradient for explanation boxes */
+.explanation-box {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Subtle gradient for a refined look */
+  border: 1px solid #333333; /* Dark border */
+  padding: 20px; /* Padding around the box */
+  margin-bottom: 20px; /* Margin bottom for spacing between boxes */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow effect */
+  font-family: 'Roboto', sans-serif; /* Trendy font family */
+  font-size: 16px; /* Font size */
+  line-height: 1.6; /* Line height */
+  width: calc(50% - 20px); /* Initially, set 50% width for desktop */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
   .explanation-box {
-    background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Subtle gradient for a refined look */
-    border: 1px solid #333333; /* Dark border */
-    padding: 20px; /* Padding around the box */
-    margin-bottom: 20px; /* Margin bottom for spacing between boxes */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow effect */
-    font-family: 'Roboto', sans-serif; /* Trendy font family */
-    font-size: 16px; /* Font size */
-    line-height: 1.6; /* Line height */
-    width: calc(50% - 20px); /* Initially, set 50% width for desktop */
+    width: calc(33.33% - 20px); /* 33.33% width for screens larger than 768px */
   }
-  
-  /* Media queries for responsiveness */
-  @media screen and (max-width: 768px) {
-    .explanation-box {
-        width: calc(33.33% - 20px); /* 33.33% width for screens larger than 768px */
-    }
+}
+
+@media screen and (max-width: 480px) {
+  .explanation-box {
+    width: calc(50% - 20px); /* 50% width for screens smaller than 480px */
   }
-  
-  @media screen and (max-width: 480px) {
-    .explanation-box {
-        width: calc(50% - 20px); /* 50% width for screens smaller than 480px */
-    }
-  }
-  
-  .topic-dropdown {
-    /* Style the dropdown menu itself */
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  #scenario-section {
-    /* Style the scenario section */
-    display: none; /* Initially hidden */
-    margin-top: 10px; /* Add some space after the dropdown */
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  /* Optional styles for the scenario section dropdown buttons (assuming they have a class) */
-  .scenario-dropdown-button {
-    padding: 5px 10px;
-    margin: 5px;
-    border: 1px solid #eee;
-    border-radius: 3px;
-  }
-  
-/* Style for the scenario section */
-#scenario-section {
+}
+
+/* Style for the protagonist and genre sections */
+.protagonist-container, .genre-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.protagonist-container .explanation-box,
+.genre-container .explanation-box {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border: 1px solid #333333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  width: calc(20% - 20px); /* Adjust width based on container width and margin */
+}
+
+/* Style for the scenario wrapper */
+.scenario-wrapper {
   position: fixed; /* Make it fixed positioned */
   bottom: 0; /* Align it to the bottom of the viewport */
   left: 0; /* Align it to the left side */
-  width: 100%; /* Make it horizontally long */
-  max-height: 200px; /* Set a maximum height if needed */
-  overflow-y: auto; /* Enable vertical scrolling if needed */
-  padding: 10px;
-  border-top: 1px solid #ddd;
-  background-color: #fff; /* Background color */
+  width: 100%; /* Make it horizontally full-width */
+  padding: 20px; /* Add padding to create space around the scenario wrapper */
+  box-sizing: border-box; /* Include padding and border in the scenario wrapper's total width and height */
+  background-color: rgba(249, 249, 249, 0.9); /* Light gray background color with opacity */
   z-index: 999; /* Ensure it's above other content */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
 }
 
+.scenario-container {
+  display: flex;
+  margin-top: 20px; /* Add margin to create space between the scenario wrapper and other sections */
+}
+
+/* Styling for the "Write Scenario" button */
+.write-scenario-button {
+  background-color: #ffa500;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.write-scenario-button:hover {
+  background-color: #e68a00;
+}
+
+/* Style for the scenario section */
+#scenario-section {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  color: #333; /* Text color */
+}
 
 /* Styling for each scenario box */
 .scenario-box {
   flex: 1;
-  background-color: #fff; /* Change background color as needed */
+  background-color: #fff; /* White background color for each box */
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  color: #333; /* Change text color as needed */
   text-align: center; /* Center text */
   transition: background-color 0.3s ease;
 }
 
 /* Hover effect for scenario boxes */
 .scenario-box:hover {
-  background-color: #f4f4f4; /* Change background color on hover */
+  background-color: #f4f4f4; /* Light gray background color on hover */
   cursor: pointer; /* Change cursor to pointer on hover */
-}
-
-/* Hide scenario section initially */
-#scenario-section {
-  display: none;
-  margin-top: 20px;
-}
-
-/* Style for the protagonist and genre sections */
-.protagonist-container, .genre-container {
-  display: none; /* Initially hide both sections */
-  margin-top: 20px; /* Add margin between sections */
-}
-
-.protagonist-container .explanation-box,
-.genre-container .explanation-box {
-  /* Add your styling here to match the explanation boxes */
-  background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  border: 1px solid #333333;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
 }
