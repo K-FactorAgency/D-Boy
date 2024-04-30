@@ -6,7 +6,6 @@
     <title>Data BakeR - Brand Storytelling Strategy Data</title>
     <link rel="stylesheet" href="scenario.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-    <script defer src="scenario.js"></script>
 </head>
 <body>
     <div class="container">
@@ -22,33 +21,36 @@
             <option value="newjeans">New Jeans</option>
         </select>
 
-        <div class="explanation-container" id="explanation-section" style="display:none;">
+        <div class="explanation-container" id="explanation-section">
             <!-- Explanation content will be displayed here -->                                                          
         </div>
         
-        <div class="scenario-container" id="scenario-section">
-            <!-- Scenario will be displayed here --> 
-        </div>
-        
-        <div class="protagonist-container" id="protagonist-section" style="display: none;">
-            <!-- Protagonist section will be displayed here -->
+        <div class="protagonist-container">
             <div class="explanation-box">Protagonist 1</div>
             <div class="explanation-box">Protagonist 2</div>
             <div class="explanation-box">Protagonist 3</div>
             <div class="explanation-box">Protagonist 4</div>
             <div class="explanation-box">Protagonist 5</div>
-        </div>
-        
-        <div class="genre-container" id="genre-section" style="display: none;">
-            <!-- Genre section will be displayed here -->
+          </div>
+          
+          <div class="genre-container">
             <div class="explanation-box">Genre 1</div>
             <div class="explanation-box">Genre 2</div>
             <div class="explanation-box">Genre 3</div>
             <div class="explanation-box">Genre 4</div>
             <div class="explanation-box">Genre 5</div>
+          </div>
+          
+
+        <div class="scenario-wrapper">
+            <!-- Scenario section will be displayed here -->
+            <div class="scenario-container" id="scenario-section">
+                <!-- Scenario content will be displayed here --> 
+            </div>
+            <button id="write-scenario-btn">Write Scenario</button>
         </div>
-        
-                  
     </div>
+
+    <script defer src="scenario.js"></script>
 </body>
 </html>
