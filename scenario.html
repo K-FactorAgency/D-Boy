@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data BakeR - Brand Storytelling Strategy Data</title>
+    <link rel="stylesheet" href="scenario.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="api.js"></script>
+    <script src="gptapi.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Data BakeR Scenario Writer</h2>
+        <p>What people said identifies what your brand should say.  <a href="https://databakeryus.gr-site.com/" target="_blank">BAKE STORIES!</a>
+        </p>
+        <h3>Select a Keyword</h3>
+        <select id="video-select" onchange="fetchAndDisplayExplanations(this.value)">
+            <option value="">--Please choose an option--</option>
+            <option value="samsunggalaxy">Samsung Galaxy</option>
+            <option value="burgerkingwhopper">Burger King Whopper</option>
+            <option value="dropbox">Dropbox</option>
+            <option value="newjeans">New Jeans</option>
+        </select>
+
+        <div class="explanation-container" id="explanation-section">
+            <!-- Explanation content will be displayed here -->                                                          
+        </div>
+        
+        <div class="protagonist-container">
+            <div class="explanation-box">
+                <h3>Young Professional</h3>
+                <p>Age: 22-35</p>
+                <p>Job: Marketing Specialist / Software Engineer / Entrepreneur</p>
+            </div>
+            <div class="explanation-box">
+                <h3>Busy Parent</h3>
+                <p>Age: 35-50</p>
+                <p>Job: Doctor / Lawyer / Teacher</p>
+            </div>
+            <div class="explanation-box">
+                <h3>Tech Enthusiast</h3>
+                <p>Age: 18-35</p>
+                <p>Job: Student / Gamer / Content Creator</p>
+            </div>
+            <div class="explanation-box">
+                <h3>Eco-Conscious Consumer</h3>
+                <p>Age: 25-45</p>
+                <p>Job: Environmental Scientist / Non-Profit Worker / Artist</p>
+            </div>
+            <div class="explanation-box">
+                <h3>Fitness Buff</h3>
+                <p>Age: 20-40</p>
+                <p>Job: Personal Trainer / Athlete / Health Coach</p>
+            </div>
+        </div>
+        
+        <div class="genre-container">
+            <div class="explanation-box">
+                <h3>Dude With a Problem</h3>
+                <p>The protagonist faces a significant obstacle they must overcome.</p>
+            </div>
+            <div class="explanation-box">
+                <h3>Out of the Bottle</h3>
+                <p>An ordinary life is disrupted by an extraordinary event, forcing the protagonist to adapt.</p>
+            </div>
+            <div class="explanation-box">
+                <h3>Rites of Passage</h3>
+                <p>The protagonist undergoes a transformative journey, maturing or learning valuable lessons.</p>
+            </div>
+            <div class="explanation-box">
+                <h3>Whydunit</h3>
+                <p>A mystery unfolds, with the protagonist seeking answers and uncovering the truth.</p>
+            </div>
+            <div class="explanation-box">
+                <h3>Buddy Love</h3>
+                <p>Two unlikely characters form a strong bond and work together through challenges.</p>
+            </div>
+        </div>         
+
+        <div class="scenario-wrapper">
+            <!-- Scenario section will be displayed here -->
+            <div class="scenario-container" id="scenario-section">
+                <!-- Scenario content will be displayed here --> 
+            </div>
+            <button id="write-scenario-btn">Write Scenario</button>
+            <h3>Generated Scenario:</h3>
+            <div class="scenario-box" id="scenario-display">Your generated scenario will appear here.</div>
+        </div>
+    </div>
+
+    <script defer src="scenario.js"></script>
+</body>
+</html>
