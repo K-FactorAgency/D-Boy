@@ -1,8 +1,8 @@
-v1.3.0
-Last Edited 240427
+v1.4.0
+Started 240430
+Last Edited 240430
 
-Added 'Explain Topics' Button
+Added 'story.html' Page
 
 Add Data
--samsunggalaxy_lda_results.csv
--00_video.csv
+- $keyword_lda_results.csv(Dropbox, Newjeans, Burger King Whopper)
